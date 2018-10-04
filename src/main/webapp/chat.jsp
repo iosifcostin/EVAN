@@ -6,7 +6,6 @@
     if (o == null) {
         response.sendRedirect("index.jsp");
     }
-    Object chat = s.getAttribute("chat");
 %>
 
 
@@ -27,11 +26,6 @@
     <div class="messaging">
         <div class="inbox_msg">
             <div class="mesgs">
-
-                <div id="chat" class="msg_history">
-
-                    <%=chat%>
-                </div>
                 <div class="type_msg">
                     <div class="input_msg_write">
                         <input id="message" type="text" class="write_msg" placeholder="Type a message"/>
@@ -39,6 +33,11 @@
                                 class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                     </div>
                 </div>
+
+                <div id="chat" class="msg_history">
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -46,23 +45,23 @@
 </body>
 <script>
 
-    // loadResult();
-    //
-    // function loadResult() {
-    //     $.ajax({
-    //         url: 'chat?action=read'
-    //     }).done(function (response) {
-    //         chat(response.chat);
-    //     });
-    // }
-    //
-    // function chat(chat) {
-    //     var divChat = document.getElementById('chat');
-    //     if (chat != null) {
-    //         divChat.innerHTML = chat
-    //     }
-    //
-    // }
+    loadResult();
+
+    function loadResult() {
+        $.ajax({
+            url: 'chat?action=read'
+        }).done(function (response) {
+            chat(response.chat);
+        });
+    }
+
+    function chat(chat) {
+        var divChat = document.getElementById('chat');
+        if (chat != null) {
+            divChat.innerHTML = chat
+        }
+
+    }
 
     function sendMessage() {
         var message = document.getElementById('message').value;

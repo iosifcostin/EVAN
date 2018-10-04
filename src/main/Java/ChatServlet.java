@@ -71,11 +71,11 @@ public class ChatServlet extends HttpServlet {
         json.put("chat", formattedString);
         returnJsonResponse(resp,json.toString());
 
-//        try {
-//            resp.sendRedirect("/chat.jsp");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            resp.sendRedirect("/chat.jsp");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 
