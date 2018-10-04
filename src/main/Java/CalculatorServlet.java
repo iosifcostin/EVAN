@@ -178,7 +178,7 @@ public class CalculatorServlet extends HttpServlet {
         ncVal = 0;
     }
 
-    private void returnJsonResponse(HttpServletResponse response, String jsonResponse) {
+    public static void returnJsonResponse(HttpServletResponse response, String jsonResponse) {
         response.setContentType("application/json");
         PrintWriter pr = null;
         try {

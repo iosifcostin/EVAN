@@ -4,8 +4,11 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
+//TODO: sometimes css loading problem if this servlet start first
+
 @WebServlet("/startup")
 public class StartUpServlet extends HttpServlet {
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -25,6 +28,7 @@ public class StartUpServlet extends HttpServlet {
 
                     List imgPaths = db.getImgPaths(val);
                     String profilePic = db.getProfileImgPath(val);
+                    List deletedPics = db.getDeletedImgPaths(val);
 
                     session.setAttribute("userid",val);
                     session.setAttribute("uname", numePrenume);
@@ -32,10 +36,11 @@ public class StartUpServlet extends HttpServlet {
                     session.setAttribute("images", imgPaths);
                     session.setAttribute("size", imgPaths.size());
                     session.setAttribute("profilePic", profilePic);
-                    resp.sendRedirect("userInfo.jsp");
+                    session.setAttribute("deletedPics", deletedPics);
 
+                    resp.sendRedirect("userProfile.jsp");
                 }else{
-                    resp.sendRedirect("index.jsp");
+                    resp.sendRedirect("firstPage.jsp");
                 }
             }
         }

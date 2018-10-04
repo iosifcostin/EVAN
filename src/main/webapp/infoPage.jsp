@@ -10,7 +10,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("firstPage.jsp");
     }
 
     Object n = s.getAttribute("uname");
@@ -31,7 +31,7 @@
 
     <div class="column side">
         <br><br><br><br>
-        <p style="font-size: 20px">Bine ai venit <a title="Mergi la profil" style="text-decoration: none" href="userInfo.jsp">
+        <p style="font-size: 20px">Bine ai venit <a title="Mergi la profil" style="text-decoration: none" href="userProfile.jsp">
             <em><%=n%>
             </em></a> <br><br>
 
@@ -76,13 +76,13 @@
         <br><br>
         <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="userInfo.jsp">Profilul meu</a>
+            <a href="userProfile.jsp">Profilul meu</a>
             <a href="user.jsp">Calculator</a>
             <a href="chat.jsp">Chat</a>
             <a href="logout">Deconectare</a>
         </div>
     </div>
-    <a href="userInfo.jsp"><h2 title="Mergi la profil" style="float: left" class="header"><%=n%>
+    <a href="userProfile.jsp"><h2 title="Mergi la profil" style="float: left" class="header"><%=n%>
     </h2></a>
     <br><br><br>
     <div>

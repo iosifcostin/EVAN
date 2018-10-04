@@ -41,12 +41,12 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("size", imgPaths.size());
             session.setAttribute("profilePic", profilePic);
             ImagesServlet.trash(request,response);
-            response.sendRedirect("userInfo.jsp");
+            response.sendRedirect("userProfile.jsp");
 
 
         } else {
 
-            String back = "index.jsp";
+            String back = "firstPage.jsp";
             HttpSession session = request.getSession();
             session.removeAttribute("userid");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(back);

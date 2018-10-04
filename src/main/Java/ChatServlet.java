@@ -69,7 +69,7 @@ public class ChatServlet extends HttpServlet {
                 .trim();           //remove trailing spaces from partially initialized arrays
 
         json.put("chat", formattedString);
-        returnJsonResponse(resp,json.toString());
+        CalculatorServlet.returnJsonResponse(resp,json.toString());
 
         try {
             resp.sendRedirect("/chat.jsp");
@@ -81,17 +81,4 @@ public class ChatServlet extends HttpServlet {
 
 
     }
-    private void returnJsonResponse(HttpServletResponse response, String jsonResponse) {
-        response.setContentType("application/json");
-        PrintWriter pr = null;
-        try {
-            pr = response.getWriter();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        assert pr != null;
-        pr.write(jsonResponse);
-        pr.close();
-    }
-
 }

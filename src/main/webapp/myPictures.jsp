@@ -3,7 +3,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("firstPage.jsp");
     }
 
     Object images = s.getAttribute("images");
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
-<a href="userInfo.jsp">
+<a href="userProfile.jsp">
     <button class="btn"><i class="fa fa-home"></i></button>
 </a>
 <a href="trash.jsp">
@@ -76,7 +76,7 @@
         $.ajax({
             url: '/manipulate?action=set&path=' + path.replace('http://localhost:8080', '..')
         }).done(function (response) {
-            location.href = "userInfo.jsp";
+            location.href = "userProfile.jsp";
         });
     }
 

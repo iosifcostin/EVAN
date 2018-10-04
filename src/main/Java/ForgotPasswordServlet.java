@@ -43,7 +43,7 @@ public class ForgotPasswordServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("message", msg);
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("firstPage.jsp");
         }
     }
 }

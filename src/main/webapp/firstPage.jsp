@@ -2,7 +2,7 @@
     HttpSession s = request.getSession();
     Object o = s.getAttribute("userid");
     if (o != null) {
-        response.sendRedirect("userInfo.jsp");
+        response.sendRedirect("userProfile.jsp");
     }
 
 %>

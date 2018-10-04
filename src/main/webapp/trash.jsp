@@ -4,7 +4,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("firstPage.jsp");
     }
 
     Object deletedPics = s.getAttribute("deletedPics");
@@ -26,7 +26,7 @@
 <a href="myPictures.jsp">
     <button class="btn"><i class="fa fa-arrow-circle-o-left"> Inapoi Poze</i></button>
 </a>
-<a href="userInfo.jsp">
+<a href="userProfile.jsp">
     <button class="btn"><i class="fa fa-home"> Inapoi la profil</i></button>
 </a>
 <button onclick="remove()" class="btn"><i class="fa fa-trash-o"></i> Sterge tot</button>

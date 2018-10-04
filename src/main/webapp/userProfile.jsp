@@ -4,7 +4,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("firstPage.jsp");
     }
 
     Object n = s.getAttribute("uname");
@@ -32,8 +32,8 @@
 <div class="row">
 
     <div class="column side">
-        <a class="inner" href="indexMod.jsp"><img src="img/runningman.jpg" alt="evan" style="width: 100px;"></a>
-        <a class="inner" href="indexMod.jsp"><h1 title="Evaluare nutritionala">EVAN</h1></a>
+        <a class="inner" href="infoPage.jsp"><img src="img/runningman.jpg" alt="evan" style="width: 100px;"></a>
+        <a class="inner" href="infoPage.jsp"><h1 title="Evaluare nutritionala">EVAN</h1></a>
 
     </div>
 
@@ -51,7 +51,7 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
         <div id="myDropdown" class="dropdown-content">
-            <a href="indexMod.jsp">EVAN Start</a>
+            <a href="infoPage.jsp">EVAN Start</a>
             <a href="user.jsp">Calculator</a>
             <a href="myPictures.jsp">Pozele mele</a>
             <a href="chat.jsp">Chat</a>

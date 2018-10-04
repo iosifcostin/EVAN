@@ -4,7 +4,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("firstPage.jsp");
     }
 %>
 
@@ -44,7 +44,6 @@
 </div>
 </body>
 <script>
-
     loadResult();
 
     function loadResult() {

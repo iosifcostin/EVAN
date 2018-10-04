@@ -42,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
             resp.sendRedirect("userCalculator.jsp");
         } else {
             System.out.println("LoginServlet:registration not done correctly ");
-            String back = "/index.jsp";
+            String back = "/firstPage.jsp";
             HttpSession session = req.getSession();
             session.removeAttribute("userid");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(back);

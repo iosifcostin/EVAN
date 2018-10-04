@@ -4,24 +4,19 @@
 
 <web-app>
     <display-name>Evan</display-name>
-    <!--<servlet>-->
-        <!--<servlet-name>Start</servlet-name>-->
-        <!--<servlet-class>StartUpServlet</servlet-class>-->
-        <!--<load-on-startup>1</load-on-startup>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>Start</servlet-name>-->
-        <!--<url-pattern>/</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--<welcome-file-list>-->
-        <!--<welcome-file>index.jsp</welcome-file>-->
-        <!--<welcome-file>start.jsp</welcome-file>-->
-        <!--<welcome-file>indexMod.jsp</welcome-file>-->
-        <!--<welcome-file>myPictures.jsp</welcome-file>-->
-        <!--<welcome-file>password.jsp</welcome-file>-->
-        <!--<welcome-file>trash.jsp</welcome-file>-->
-        <!--<welcome-file>user.jsp</welcome-file>-->
-        <!--<welcome-file>userInfo.jsp</welcome-file>-->
-        <!--<welcome-file>chat.jsp</welcome-file>-->
-    <!--</welcome-file-list>-->
+
+    <!--TODO: sometimes css loading problem if this servlet start first-->
+
+    <servlet>
+        <servlet-name>Start</servlet-name>
+        <servlet-class>StartUpServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Start</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
