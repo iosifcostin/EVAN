@@ -26,13 +26,7 @@ public class ForgotPasswordServlet extends HttpServlet {
         String subiect = "Noua parola";
         String mesaj = "Noua dumneavoastra parla EVAN este : " + newPassword;
 
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-
-                email.send(usrEmail, subiect, mesaj);
-            }
-        };
+        Runnable runnable = () -> email.send(usrEmail, subiect, mesaj);
         runnable.run();
 
 
@@ -43,7 +37,7 @@ public class ForgotPasswordServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("message", msg);
 
-            response.sendRedirect("firstPage.jsp");
+            response.sendRedirect("index.jsp");
         }
     }
 }

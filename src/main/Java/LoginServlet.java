@@ -22,7 +22,6 @@ public class LoginServlet extends HttpServlet {
         int val = db.login(email, parola);
         String numePrenume = db.numePrenume(val);
         List listIMC = db.getIMCfromDb(val);
-
         List imgPaths = db.getImgPaths(val);
         String profilePic = db.getProfileImgPath(val);
 
@@ -46,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-            String back = "firstPage.jsp";
+            String back = "index.jsp";
             HttpSession session = request.getSession();
             session.removeAttribute("userid");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(back);

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 @WebServlet("/register")
@@ -31,18 +32,21 @@ public class RegisterServlet extends HttpServlet {
 
         int value = db.login(email, parola);
         String numePrenume = db.numePrenume(value);
+        List imgPaths = db.getImgPaths(value);
 
         if (value != -1) {
 
             HttpSession session = req.getSession();
             session.setAttribute("userid", value);
             session.setAttribute("uname", numePrenume);
+            session.setAttribute("images", imgPaths);
+            session.setAttribute("size", imgPaths.size());
 
 
-            resp.sendRedirect("userCalculator.jsp");
+            resp.sendRedirect("userProfile.jsp");
         } else {
             System.out.println("LoginServlet:registration not done correctly ");
-            String back = "/firstPage.jsp";
+            String back = "/index.jsp";
             HttpSession session = req.getSession();
             session.removeAttribute("userid");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(back);

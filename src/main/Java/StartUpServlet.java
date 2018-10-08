@@ -4,14 +4,20 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
-//TODO: sometimes css loading problem if this servlet start first
+/* acest servlet verifica cookies si face autologin daca gaseste cookie-ul aplicatiei
+
+* Problema: - in web.xml acest servlet daca e pus loadOnStartUp tomcat nu
+* incarca css-urile de aceea am comentat codul in web.xml ...
+*
+*/
 
 @WebServlet("/startup")
 public class StartUpServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
 
         Postgres db = new Postgres();
         HttpSession session = req.getSession();
@@ -40,7 +46,7 @@ public class StartUpServlet extends HttpServlet {
 
                     resp.sendRedirect("userProfile.jsp");
                 }else{
-                    resp.sendRedirect("firstPage.jsp");
+                    resp.sendRedirect("index.jsp");
                 }
             }
         }

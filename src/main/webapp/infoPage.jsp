@@ -10,7 +10,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("firstPage.jsp");
+        response.sendRedirect("index.jsp");
     }
 
     Object n = s.getAttribute("uname");

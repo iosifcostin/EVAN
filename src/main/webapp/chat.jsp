@@ -4,7 +4,7 @@
     Object o = s.getAttribute("userid");
 
     if (o == null) {
-        response.sendRedirect("firstPage.jsp");
+        response.sendRedirect("index.jsp");
     }
 %>
 
@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
+    <a href="index.jsp"><h1 title="Profil"> <<< Inapoi la profil</h1></a>
 </div>
 </body>
 <script>

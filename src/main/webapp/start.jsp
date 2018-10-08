@@ -18,7 +18,7 @@
 <body class="center">
 <div class="row">
     <div class="column side">
-        <a href="firstPage.jsp"><h1 title="Evaluare nutritionala">EVAN</h1></a>
+        <a href="index.jsp"><h1 title="Evaluare nutritionala">EVAN</h1></a>
         <br><br>
 
         <div>

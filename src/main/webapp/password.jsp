@@ -15,7 +15,7 @@
         <input id="email" type="text" placeholder="@email.com" name="email" required>
 
         <div class="clearfix">
-            <button type="button" class="cancelbtn"><a href="firstPage.jsp">Renunta</a></button>
+            <button type="button" class="cancelbtn"><a href="index.jsp">Renunta</a></button>
             <button id="x" type="submit" class="signupbtn" onclick="message()">Trimite-mi o parola noua</button>
         </div>
     </div>

@@ -1,3 +1,4 @@
+
 <%
     HttpSession s = request.getSession();
     Object o = s.getAttribute("userid");
@@ -145,7 +146,7 @@
         </div>
 
     </div>
-
+</div>
     <script>
         // Get the modal
         var modal = document.getElementById('id01');

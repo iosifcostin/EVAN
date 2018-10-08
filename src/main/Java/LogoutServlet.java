@@ -12,7 +12,7 @@ public class LogoutServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String back = "firstPage.jsp";
+        String back = "index.jsp";
         HttpSession session = request.getSession();
 
         session.invalidate();
